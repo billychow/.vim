@@ -1,4 +1,6 @@
-.vim
+## Installation
+
+```
 mkdir -p ~/.vim/bundle
 cd ~/.vim
 git init
@@ -11,4 +13,4 @@ ln -s ~/.vim/.vimrc ~/.vimrc
 
 vim
 :BundleInstall
-====
+```
