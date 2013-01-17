@@ -80,6 +80,10 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
+" Set map leader instead of default "\"
+let mapleader = ","
+let g:mapleader = ","
+
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
 
