@@ -64,7 +64,7 @@ set tabstop=4       " tab width
 set softtabstop=4   " backspace & 
 set shiftwidth=4    " indent width
 "set textwidth=79
-"set expandtab       " expand tab to spac"
+"set expandtab       " expand tab to space
  
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
@@ -137,24 +137,32 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType c setlocal omnifunc=ccomplete#Complete"
+autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
 " SuperTab
 "let g:SuperTabDefultCompletionType='context'
-"let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
-"let g:SuperTabRetainCompletionType=2
+let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
+let g:SuperTabRetainCompletionType=2
 
 " ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.DS_Store  " MacOSX/Linux
-let g:ctrlp_custom_ignore = ''"
+let g:ctrlp_custom_ignore = '\.svn$\|\.git$\|\.hg$'
+
+" Keybindings for plugin toggle
+nmap <F3> :GundoToggle<cr>
+nmap <F4> :IndentGuidesToggle<cr>
+nmap <F5> :NERDTreeToggle<cr>
+nmap <F6> :TagbarToggle<cr>
+nnoremap <leader>a :Ack
+nnoremap <leader>v V`]
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-"
-" " eggcache vim
+
+" eggcache vim
 :command W w
 :command WQ wq
 :command Wq wq
