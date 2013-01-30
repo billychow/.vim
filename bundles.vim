@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 "------------------
@@ -33,7 +33,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'sjl/gundo.vim'
-""Bundle 'Raimondi/delimitMate'
+"Bundle 'Raimondi/delimitMate'
 Bundle 'kana/vim-smartinput'
 Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -47,7 +47,9 @@ Bundle 'humiaozuzu/TabBar'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
+if MySys() != "win32"
+	Bundle 'Lokaltog/vim-powerline'
+endif
 Bundle 'scrooloose/syntastic'
 
 "--------------
