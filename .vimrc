@@ -5,7 +5,8 @@ function! MySys()
 		return "unix"
 	else
 		return "mac"
-endif
+	endif
+endfunction
 
 source ~/.vim/bundles.vim
 
