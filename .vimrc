@@ -1,3 +1,12 @@
+function! MySys()
+	if has("win32")
+		return "win32"
+	elseif has("unix")
+		return "unix"
+	else
+		return "mac"
+endif
+
 source ~/.vim/bundles.vim
 
 set helplang=cn " Set default help language
@@ -8,7 +17,7 @@ set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
 
-" enable syntax hightlight and completion 
+" enable syntax hightlight and completion
 syntax enable
 syntax on
 
@@ -61,11 +70,11 @@ set matchpairs+=<:>
 set autoindent
 set smartindent     " indent when
 set tabstop=4       " tab width
-set softtabstop=4   " backspace & 
+set softtabstop=4   " backspace &
 set shiftwidth=4    " indent width
 "set textwidth=79
 "set expandtab       " expand tab to space
- 
+
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
 autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
@@ -99,10 +108,10 @@ hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 let g:tagbar_left=1
 let g:tagbar_width=30
 let g:tagbar_autofocus = 1
-let g:tagbar_sort = 0 
+let g:tagbar_sort = 0
 let g:tagbar_compact = 1
 
-" Nerd Tree 
+" Nerd Tree
 let NERDChristmasTree=0
 let NERDTreeWinSize=30
 let NERDTreeChDirMode=2
