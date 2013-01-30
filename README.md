@@ -8,7 +8,7 @@ git remote add origin https://github.com/billychow/.vim.git
 git fetch
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-rm ~/.vimrc
+mv ~/.vimrc ~/.vimrc.bak
 ln -s ~/.vim/.vimrc ~/.vimrc
 
 vim
