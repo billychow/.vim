@@ -124,8 +124,12 @@ let NERDTreeWinPos = "right"
 " ZenCoding
 let g:user_zen_expandabbr_key='<C-j>'
 
-" powerline
-"let g:Powerline_symbols = 'fancy'
+" vim-airline
+let g:airline_enable_fugitive=1
+let g:airline_enable_syntastic=1
+let g:airline_theme='dark'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1

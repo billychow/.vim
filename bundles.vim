@@ -48,9 +48,7 @@ Bundle 'humiaozuzu/TabBar'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
-if MySys() != "win32"
-	Bundle 'Lokaltog/vim-powerline'
-endif
+Bundle 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
 
 "--------------
