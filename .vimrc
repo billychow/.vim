@@ -10,7 +10,8 @@ endfunction
 
 source ~/.vim/bundles.vim
 
-set helplang=cn " Set default help language
+" set help language
+set helplang=cn 
 
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
@@ -18,28 +19,26 @@ set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
 
-" enable syntax hightlight and completion
-syntax enable
+" enable syntax hightlight
 syntax on
 
 " color theme
 color vividchalk
 
-" highlight current line
+" highlight current line & column
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
-" search operations
-set incsearch		" do incremental searching
-"set highlight " conflict with highlight current line
-set ignorecase			" ignore case
-set smartcase			" but don't ignore it, when search string contains uppercase letters
-set hlsearch		" highlight search result
-set showmatch			" showmatch: Show the matching bracket for the last ')'?
+" search options
+set incsearch  " incremental search
+"set highlight  " conflict with highlight current line
+set ignorecase " ignore case
+set smartcase  " but don't ignore it, when search string contains uppercase letters
+set hlsearch   " highlight search result
 
 " editor settings
-" When editing a file, always jump to the last cursor position
+" when editing a file, always jump to the last cursor position
 autocmd BufReadPost *
 		\ if ! exists("g:leave_my_cursor_position_alone") |
 		\     if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -47,34 +46,34 @@ autocmd BufReadPost *
 		\     endif |
 		\ endif
 
-set nocompatible
-set nofoldenable                                                  " disable folding"
-set confirm                                                       " prompt when existing from an unsaved file
-set history=1000
-set backspace=indent,eol,start                                    " More powerful backspacing
+set nocompatible               " disable compatible mode
+set nofoldenable               " disable folding
+set confirm                    " prompt when existing from an unsaved file
+set history=1000               " set command history lines
+set backspace=indent,eol,start " more powerful backspacing
 
 " display settings
-set t_Co=256                                                      " Explicitly tell vim that the terminal has 256 colors"
-set mouse=a
-set report=0
-set nowrap
-set scrolloff=2
-set number
-set showmatch
-set showcmd
-set title
-set laststatus=2
-set matchtime=2
-set matchpairs+=<:>
+set t_Co=256        " explicitly tell vim that the terminal has 256 colors              "
+set mouse=a         " enable mouse in all modes
+set report=0        " always show number of lines changed
+set nowrap          " no wrap for long lines
+set scrolloff=2     " minimal number of screen lines to keep above and below the cursor
+set number          " show line number
+set showmatch       " show matched bracket
+set matchtime=2     " show matched bracket in tenths of a second
+set matchpairs+=<:> " extend matched characters
+set showcmd         " show command in the last line of screen
+set title           " show filename as window title
+set laststatus=2    " always show status line
 
-" Default Indentation
-set autoindent
-set smartindent     " indent when
-set tabstop=4       " tab width
-set softtabstop=4   " backspace &
-set shiftwidth=4    " indent width
+" indentation
+set autoindent    " copy indent from current line
+set smartindent   " C-like indent style, but more loose than cindent
+set tabstop=8     " number of spaces that a <Tab> in the file counts for
+set softtabstop=4 " number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>
+set shiftwidth=4  " number of spaces to use for each step of (auto)indent. used for 'cidenti', >>, <<, etc
+set expandtab     " expand tab to space
 "set textwidth=79
-"set expandtab       " expand tab to space
 
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
