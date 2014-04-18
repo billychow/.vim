@@ -26,8 +26,8 @@ syntax on
 color vividchalk
 
 " highlight current line & column
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
+autocmd WinLeave * set nocursorline nocursorcolumn
+autocmd WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
 " search options
@@ -69,27 +69,28 @@ set laststatus=2    " always show status line
 " indentation
 set autoindent    " copy indent from current line
 set smartindent   " C-like indent style, but more loose than cindent
-set tabstop=8     " number of spaces that a <Tab> in the file counts for
+set tabstop=4     " number of spaces that a <Tab> in the file counts for
 set softtabstop=4 " number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>
 set shiftwidth=4  " number of spaces to use for each step of (auto)indent. used for 'cidenti', >>, <<, etc
 set expandtab     " expand tab to space
 "set textwidth=79
 
-autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
-autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
-autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
-autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+"autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
+"autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+"autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+"autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
+"autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
+"autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
 
 " syntax support
-autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
-" js
+"autocmd Syntax javascript set syntax=jquery   " jQuery syntax support
+
+" html indentation
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
-" Set map leader instead of default "\"
+" set map leader instead of default "\"
 let mapleader = ","
 let g:mapleader = ","
 
@@ -97,12 +98,12 @@ let g:mapleader = ","
 let g:EasyMotion_leader_key = '<Leader>'
 
 " tabbar
-let g:Tb_MaxSize = 2
-let g:Tb_TabWrap = 1
-hi Tb_Normal guifg=white ctermfg=white
-hi Tb_Changed guifg=green ctermfg=green
-hi Tb_VisibleNormal ctermbg=252 ctermfg=235
-hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
+let g:Tb_MaxSize = 2 " max height
+let g:Tb_TabWrap = 1 " enable tabbar wrap
+highlight Tb_Normal guifg=white ctermfg=white
+highlight Tb_Changed guifg=green ctermfg=green
+highlight Tb_VisibleNormal ctermbg=252 ctermfg=235
+highlight Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
 " Tagbar
 let g:tagbar_left=1
