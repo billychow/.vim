@@ -26,8 +26,6 @@ syntax on
 color vividchalk
 
 " highlight current line & column
-autocmd WinLeave * set nocursorline nocursorcolumn
-autocmd WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
 " search options
@@ -51,6 +49,8 @@ set nofoldenable               " disable folding
 set confirm                    " prompt when existing from an unsaved file
 set history=1000               " set command history lines
 set backspace=indent,eol,start " more powerful backspacing
+set noswapfile                 " disable swap file
+set autoread                   " read file automatically when it has been changed outside of vim
 
 " display settings
 set t_Co=256        " explicitly tell vim that the terminal has 256 colors              "
@@ -159,7 +159,7 @@ let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
 let g:SuperTabRetainCompletionType=2
 
 " ctrlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.DS_Store  " MacOSX/Linux
+set wildignore+=.svn,.git,.hg,*/tmp/*,*.so,*.swp,*.zip,*.pyc,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.svn$\|\.git$\|\.hg$'
 
 " Keybindings for plugin toggle
