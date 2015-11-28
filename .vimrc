@@ -23,7 +23,9 @@ filetype plugin indent on
 syntax on
 
 " color theme
-color vividchalk
+colorscheme molokai
+"let g:molokai_original = 1
+"let g:rehash256 = 1
 
 " highlight current line & column
 set cursorline cursorcolumn
@@ -121,12 +123,22 @@ let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
 let NERDTreeWinPos = "right"
 
+nnoremap <C-S-Tab> :tabprevious<CR>
+nnoremap <C-Tab> :tabnext<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-w> :q<CR>
+inoremap <C-S-Tab> <Esc>:tabprevious<CR>i
+inoremap <C-Tab> <Esc>:tabnext<CR>i
+inoremap <C-t> <Esc>:tabnew<CR>
+inoremap <C-w> <Esc>:q<CR>
+
 " ZenCoding
 let g:user_zen_expandabbr_key='<C-j>'
 
 " vim-airline
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_enable_fugitive=1
-let g:airline_enable_syntastic=1
+"let g:airline_enable_syntastic=1
 let g:airline_theme='dark'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
@@ -168,7 +180,6 @@ nmap <F4> :IndentGuidesToggle<cr>
 nmap <F5> :NERDTreeToggle<cr>
 nmap <F6> :TagbarToggle<cr>
 nnoremap <leader>a :Ack
-nnoremap <leader>v V`]
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
@@ -176,7 +187,7 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" eggcache vim
+" egg-ache vim
 :command W w
 :command WQ wq
 :command Wq wq
