@@ -137,7 +137,7 @@ let g:user_zen_expandabbr_key='<C-j>'
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_enable_fugitive=1
+"let g:airline_enable_fugitive=1 "obsolete
 "let g:airline_enable_syntastic=1
 let g:airline_theme='dark'
 let g:airline_left_sep=''
