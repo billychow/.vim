@@ -139,9 +139,8 @@ let g:user_zen_expandabbr_key='<C-j>'
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_enable_fugitive=1 "obsolete
 "let g:airline_enable_syntastic=1
-let g:airline_theme='dark'
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+let g:airline_theme = 'dark'
+let g:airline_powerline_fonts = 1
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
