@@ -176,7 +176,7 @@ let g:ctrlp_custom_ignore = '\.svn$\|\.git$\|\.hg$'
 " Keybindings for plugin toggle
 nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
-nmap <F5> :NERDTreeToggle<cr>
+nmap <F5> :NERDTreeTabsToggle<cr>
 nmap <F6> :TagbarToggle<cr>
 nnoremap <leader>a :Ack
 
