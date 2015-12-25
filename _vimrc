@@ -29,7 +29,6 @@ set formatoptions+=mB "Open breakwords for Asia Language
 set nostartofline " leave my cursor where it was
 
 set encoding=utf-8
-set fenc=utf-8 " File Encoding
 "set fenc=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936 " Set File Encoding and detect type with supported format
 
 set hlsearch		" highlight search result
@@ -115,15 +114,15 @@ nnoremap <silent> <F3> :Grep<CR>
 
 " NERDTree
 map <F10> :NERDTreeToggle<CR>
-map <leader>tn :tabnew %<cr> 
-map <leader>te :tabedit 
-map <leader>tc :tabclose<cr> 
-map <leader>tm :tabmove 
-try 
-	set switchbuf=usetab 
-	set stal=2 
-catch 
-endtry 
+map <leader>tn :tabnew %<cr>
+map <leader>te :tabedit
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+try
+	set switchbuf=usetab
+	set stal=2
+catch
+endtry
 
 " Enable extended % matching, it can also switch among e.g. if/elsif/else/end, between opening and closing XML tags, and more.
 runtime macros/matchit.vim

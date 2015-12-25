@@ -10,63 +10,49 @@ endfunction
 
 source ~/.vim/bundles.vim
 
-" set help language
-set helplang=cn 
+set nocompatible               " disable compatible mode
 
-" encoding dectection
+" general
+set nobackup
+set nowritebackup
+set noswapfile                 " disable swap file
+set nofoldenable               " disable folding
+set confirm                    " prompt when existing from an unsaved file
+set history=1000               " set command history lines
+set backspace=indent,eol,start " more powerful backspacing
+set autoread                   " read file automatically when it has been changed outside of vim
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-
-" enable filetype dectection and ft specific plugin/indent
-filetype plugin indent on
-
-" enable syntax hightlight
-syntax on
+filetype plugin indent on      " enable filetype dectection and ft specific plugin/indent
 
 " color theme
 colorscheme molokai
 "let g:molokai_original = 1
 "let g:rehash256 = 1
 
-" highlight current line & column
-set cursorline cursorcolumn
-
-" search options
-set incsearch  " incremental search
-"set highlight  " conflict with highlight current line
-set ignorecase " ignore case
-set smartcase  " but don't ignore it, when search string contains uppercase letters
-set hlsearch   " highlight search result
-
-" editor settings
-" when editing a file, always jump to the last cursor position
-autocmd BufReadPost *
-		\ if ! exists("g:leave_my_cursor_position_alone") |
-		\     if line("'\"") > 0 && line ("'\"") <= line("$") |
-		\         exe "normal g'\"" |
-		\     endif |
-		\ endif
-
-set nocompatible               " disable compatible mode
-set nofoldenable               " disable folding
-set confirm                    " prompt when existing from an unsaved file
-set history=1000               " set command history lines
-set backspace=indent,eol,start " more powerful backspacing
-set noswapfile                 " disable swap file
-set autoread                   " read file automatically when it has been changed outside of vim
-
 " display settings
-set t_Co=256        " explicitly tell vim that the terminal has 256 colors              "
+syntax on           " enable syntax hightlight
+set t_Co=256        " explicitly tell vim that the terminal has 256 colors
 set mouse=a         " enable mouse in all modes
 set report=0        " always show number of lines changed
 set nowrap          " no wrap for long lines
 set scrolloff=2     " minimal number of screen lines to keep above and below the cursor
 set number          " show line number
+set showcmd         " show command in the last line of screen
+set cmdheight=2     " command lines number
+set title           " show filename as window title
+set laststatus=2    " always show status line
+set cursorline cursorcolumn    " highlight current line & column
+
+" search options
+set hlsearch   " highlight search result
+"set highlight  " conflict with highlight current line
 set showmatch       " show matched bracket
 set matchtime=2     " show matched bracket in tenths of a second
 set matchpairs+=<:> " extend matched characters
-set showcmd         " show command in the last line of screen
-set title           " show filename as window title
-set laststatus=2    " always show status line
+set incsearch  " incremental search
+set ignorecase " ignore case
+set smartcase  " but don't ignore it, when search string contains uppercase letters
+
 
 " indentation
 set autoindent    " copy indent from current line
@@ -91,6 +77,15 @@ set expandtab     " expand tab to space
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+
+" editor settings
+" when editing a file, always jump to the last cursor position
+autocmd BufReadPost *
+		\ if ! exists("g:leave_my_cursor_position_alone") |
+		\     if line("'\"") > 0 && line ("'\"") <= line("$") |
+		\         exe "normal g'\"" |
+		\     endif |
+		\ endif
 
 " set map leader instead of default "\"
 let mapleader = ","
