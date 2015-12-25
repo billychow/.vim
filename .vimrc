@@ -74,9 +74,9 @@ set expandtab                " expand tab to space
 "autocmd Syntax javascript set syntax=jquery   " jQuery syntax support
 
 " html indentation
-let g:html_indent_inctags = "html,body,head,tbody"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
+let g:html_indent_inctags  = "html,body,head,tbody"
+let g:html_indent_script1  = "inc"
+let g:html_indent_style1   = "inc"
 
 " editor settings
 " when editing a file, always jump to the last cursor position
@@ -88,8 +88,8 @@ autocmd BufReadPost *
 		\ endif
 
 " set map leader instead of default "\"
-let mapleader = ","
-let g:mapleader = ","
+let mapleader    = ","
+let g:mapleader  = ","
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
@@ -103,20 +103,20 @@ highlight Tb_VisibleNormal ctermbg=252 ctermfg=235
 highlight Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
 " Tagbar
-let g:tagbar_left=1
-let g:tagbar_width=30
-let g:tagbar_autofocus = 1
-let g:tagbar_sort = 0
-let g:tagbar_compact = 1
+let g:tagbar_left       = 1
+let g:tagbar_width      = 30
+let g:tagbar_autofocus  = 1
+let g:tagbar_sort       = 0
+let g:tagbar_compact    = 1
 
 " Nerd Tree
-let NERDChristmasTree=0
-let NERDTreeWinSize=30
-let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
-let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
-let NERDTreeShowBookmarks=1
-let NERDTreeWinPos = "right"
+let NERDChristmasTree     = 0
+let NERDTreeWinSize       = 30
+let NERDTreeChDirMode     = 2
+let NERDTreeIgnore        = ['\.vim$', '\~$', '\.pyc$', '\.swp$']
+let NERDTreeSortOrder     = ['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+let NERDTreeShowBookmarks = 1
+let NERDTreeWinPos        = "right"
 
 nnoremap <C-S-Tab> :tabprevious<CR>
 nnoremap <C-Tab> :tabnext<CR>
@@ -162,7 +162,7 @@ autocmd FileType c setlocal omnifunc=ccomplete#Complete
 " SuperTab
 "let g:SuperTabDefultCompletionType='context'
 let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
-let g:SuperTabRetainCompletionType=2
+let g:SuperTabRetainCompletionType  = 2
 
 " ctrlp
 set wildignore+=.svn,.git,.hg,*/tmp/*,*.so,*.swp,*.zip,*.pyc,.DS_Store  " MacOSX/Linux
