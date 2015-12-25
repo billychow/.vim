@@ -10,19 +10,19 @@ endfunction
 
 source ~/.vim/bundles.vim
 
-set nocompatible               " disable compatible mode
+set nocompatible                                                 " disable compatible mode
 
 " general
 set nobackup
 set nowritebackup
-set noswapfile                 " disable swap file
-set nofoldenable               " disable folding
-set confirm                    " prompt when existing from an unsaved file
-set history=1000               " set command history lines
-set backspace=indent,eol,start " more powerful backspacing
-set autoread                   " read file automatically when it has been changed outside of vim
+set noswapfile                                                   " disable swap file
+set nofoldenable                                                 " disable folding
+set confirm                                                      " prompt when existing from an unsaved file
+set history=1000                                                 " set command history lines
+set backspace=indent,eol,start                                   " more powerful backspacing
+set autoread                                                     " read file automatically when it has been changed outside of vim
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-filetype plugin indent on      " enable filetype dectection and ft specific plugin/indent
+filetype plugin indent on                                        " enable filetype dectection and ft specific plugin/indent
 
 " color theme
 colorscheme molokai
@@ -30,37 +30,37 @@ colorscheme molokai
 "let g:rehash256 = 1
 
 " display settings
-syntax on           " enable syntax hightlight
-set t_Co=256        " explicitly tell vim that the terminal has 256 colors
-set mouse=a         " enable mouse in all modes
-set report=0        " always show number of lines changed
-set nowrap          " no wrap for long lines
-set scrolloff=2     " minimal number of screen lines to keep above and below the cursor
-set number          " show line number
-set showcmd         " show command in the last line of screen
-set cmdheight=2     " command lines number
-set title           " show filename as window title
-set laststatus=2    " always show status line
-set cursorline cursorcolumn    " highlight current line & column
+syntax on                    " enable syntax hightlight
+set t_Co=256                 " explicitly tell vim that the terminal has 256 colors
+set mouse=a                  " enable mouse in all modes
+set report=0                 " always show number of lines changed
+set nowrap                   " no wrap for long lines
+set scrolloff=2              " minimal number of screen lines to keep above and below the cursor
+set number                   " show line number
+set showcmd                  " show command in the last line of screen
+set cmdheight=2              " command lines number
+set title                    " show filename as window title
+set laststatus=2             " always show status line
+set cursorline cursorcolumn  " highlight current line & column
 
 " search options
-set hlsearch   " highlight search result
-"set highlight  " conflict with highlight current line
-set showmatch       " show matched bracket
-set matchtime=2     " show matched bracket in tenths of a second
-set matchpairs+=<:> " extend matched characters
-set incsearch  " incremental search
-set ignorecase " ignore case
-set smartcase  " but don't ignore it, when search string contains uppercase letters
+set hlsearch                 " highlight search result
+"set highlight               " conflict with highlight current line
+set showmatch                " show matched bracket
+set matchtime=2              " show matched bracket in tenths of a second
+set matchpairs+=<:>          " extend matched characters
+set incsearch                " incremental search
+set ignorecase               " ignore case
+set smartcase                " but don't ignore it, when search string contains uppercase letters
 
 
 " indentation
-set autoindent    " copy indent from current line
-set smartindent   " C-like indent style, but more loose than cindent
-set tabstop=4     " number of spaces that a <Tab> in the file counts for
-set softtabstop=4 " number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>
-set shiftwidth=4  " number of spaces to use for each step of (auto)indent. used for 'cidenti', >>, <<, etc
-set expandtab     " expand tab to space
+set autoindent               " copy indent from current line
+set smartindent              " C-like indent style, but more loose than cindent
+set tabstop=4                " number of spaces that a <Tab> in the file counts for
+set softtabstop=4            " number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>
+set shiftwidth=4             " number of spaces to use for each step of (auto)indent. used for 'cidenti', >>, <<, etc
+set expandtab                " expand tab to space
 "set textwidth=79
 
 "autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
