@@ -16,6 +16,7 @@ Plugin 'ervandew/supertab'
 Plugin 'mattn/emmet-vim'
 Plugin 'Shougo/neocomplcache'
 Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 " snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'

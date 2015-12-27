@@ -138,6 +138,7 @@ let g:airline_theme = 'dark'
 let g:airline_powerline_fonts = 1
 
 " NeoComplCache
+"let g:neosnippet#disable_runtime_snippets = { "_": 1, }
 let g:neocomplcache_enable_at_startup=1
 let g:neoComplcache_disableautocomplete=1
 "let g:neocomplcache_enable_underbar_completion = 1
