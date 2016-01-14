@@ -87,6 +87,9 @@ autocmd BufReadPost *
 		\     endif |
 		\ endif
 
+autocmd WinEnter * set nofoldenable
+autocmd WinEnter * set nofoldenable
+
 " set map leader instead of default "\"
 let mapleader = ","
 let g:mapleader = ","
