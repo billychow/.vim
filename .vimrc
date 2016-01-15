@@ -87,8 +87,11 @@ autocmd BufReadPost *
 		\     endif |
 		\ endif
 
-autocmd WinEnter * set nofoldenable
-autocmd WinEnter * set nofoldenable
+"autocmd WinEnter * set nofoldenable
+"autocmd WinEnter * set nofoldenable
+if &diff                             " only for diff mode/vimdiff
+	set diffopt=filler,context:1000000 " filler is default and inserts empty lines for sync
+endif
 
 " set map leader instead of default "\"
 let mapleader = ","
