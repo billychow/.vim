@@ -64,11 +64,11 @@ set expandtab                " expand tab to space
 "set textwidth=79
 
 "autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-"autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
-"autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
-"autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
-"autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
-"autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+autocmd FileType python setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
+autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
 
 " syntax support
 "autocmd Syntax javascript set syntax=jquery   " jQuery syntax support
@@ -86,6 +86,12 @@ autocmd BufReadPost *
 		\         exe "normal g'\"" |
 		\     endif |
 		\ endif
+
+"autocmd WinEnter * set nofoldenable
+"autocmd WinEnter * set nofoldenable
+if &diff                             " only for diff mode/vimdiff
+	set diffopt=filler,context:1000000 " filler is default and inserts empty lines for sync
+endif
 
 " set map leader instead of default "\"
 let mapleader    = ","
@@ -138,6 +144,7 @@ let g:airline_theme = 'dark'
 let g:airline_powerline_fonts = 1
 
 " NeoComplCache
+"let g:neosnippet#disable_runtime_snippets = { "_": 1, }
 let g:neocomplcache_enable_at_startup=1
 let g:neoComplcache_disableautocomplete=1
 "let g:neocomplcache_enable_underbar_completion = 1
